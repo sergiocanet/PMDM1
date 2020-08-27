@@ -9,10 +9,10 @@ fun main() {
 // https://kotlinlang.org/docs/reference/control-flow.html
 
 // TODO: 2.- Uncomment this function:
-/* fun exercise2() {
+ fun exercise2() {
     var month = 1
     while(month != 0) {
-        println("Enter the number of the month (0 to finish)");
+        println("Enter the number of the month (0 to finish)")
         val monthStr = readLine()
         if (month > 0 && month <= 12) {
             month = monthStr!!.toInt() // Don't worry about the !! yet. We will study it later
@@ -23,4 +23,4 @@ fun main() {
             // Invoke the function from main()
         }
     }
-} */
+}
