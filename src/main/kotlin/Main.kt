@@ -17,7 +17,7 @@ fun main() {
         if (month > 0 && month <= 12) {
             month = monthStr!!.toInt() // Don't worry about the !! yet. We will study it later
             // TODO: 2 write the number of days that has that month, using the "when" structure
-            // You can read it about it here:
+            // You can read about it here:
             // https://kotlinlang.org/docs/reference/control-flow.html
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
