@@ -40,3 +40,16 @@ fun countAs(str: String): Int {
     val count = str.count { c -> c == 'a' }
     return count
 }
+
+
+fun stringMapper(str: String, mapper: (String) -> Int): Int {
+    return mapper(str)
+}
+// TODO 5: Write a function called exercise5()
+// In it you will invoke the function stringMapper declared above twice.
+// The first one with a function that returns the number of characters
+// and the second one with a function that returns the number of a’s.
+// Print its results.
+
+
+
