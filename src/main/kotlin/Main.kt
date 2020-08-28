@@ -1,6 +1,7 @@
 fun main() {
     println("Hello World.")
     println("number of a's = " + countAs("Mary got married"))
+    assignReadersToBooks()
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -52,4 +53,15 @@ fun stringMapper(str: String, mapper: (String) -> Int): Int {
 // Print its results.
 
 
+data class Reader(val name: String, val age: Int)
+// TODO 6: Create a data class Book that has 2 parameters
+// title as a String that can not be modified (read only)
+// and reader as a Reader
+fun assignReadersToBooks() {
+    val reader1 = Reader("John", 23)
+    val reader2 = Reader("Mary", 34)
+    // TODO 6: Uncomment these sentences
+    // val book1 = Book("The name of the wind", reader1)
+    // book1.reader = reader2
+}
 
