@@ -2,6 +2,9 @@ fun main() {
     println("Hello World.")
     println("number of a's = " + countAs("Mary got married"))
     assignReadersToBooks()
+    printStringLength("This is a test")
+    printStringLength(null)
+    //println("Concatenation: " + concatenate("hello", null))
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -65,3 +68,15 @@ fun assignReadersToBooks() {
     // book1.reader = reader2
 }
 
+// TODO 7: Write the body of this function
+// That prints the length of the string parameter.
+// If the string is null, print 0
+fun printStringLength(string: String?) {
+    // Body
+}
+
+// TODO 8: Write a method concatenate() that concatenates 2 Strings
+// received as parameters.
+// If a String is null, convert it to “”.
+// This is the invocation:
+// println("Concatenation: " + concatenate("hello", null))
