@@ -1,5 +1,6 @@
 fun main() {
     println("Hello World.")
+    println("number of a's = " + countAs("Mary got married"))
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -31,3 +32,11 @@ fun main() {
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
+// TODO: 4 Modify this function abbreviating it with "=" as return type
+// (simplification 2)
+// https://developer.android.com/kotlin/learn#simplifying
+// Note: You can remove the : Int in the declaration
+fun countAs(str: String): Int {
+    val count = str.count { c -> c == 'a' }
+    return count
+}
