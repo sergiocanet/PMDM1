@@ -7,6 +7,7 @@ fun main() {
     //println("Concatenation: " + concatenate("hello", null))
     exercise1()
     exercise2()
+    println(exercise3(48288679))
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -52,6 +53,17 @@ fun exercise1(){
 // that represents the corresponding NIF (number + letter)
 // https://www.ordenacionjuego.es/en/calculo-digito-control
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
+
+fun exercise3 (dni: Int): String{
+
+    val resto: Int = dni % 23
+    val letras = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S", "Q","V", "H", "L", "C", "K", "E")
+
+
+
+    return letras.get(resto).toString()
+
+}
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
 // (simplification 2)
