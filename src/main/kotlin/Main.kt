@@ -4,10 +4,15 @@ fun main() {
     assignReadersToBooks()
     printStringLength("This is a test")
     printStringLength(null)
-    //println("Concatenation: " + concatenate("hello", null))
+    println("Concatenation: " + concatenate("hello", null))
     exercise1()
     exercise2()
     println(exercise3(48288679))
+    exercise5("Texto_de_prueba")
+    assignReadersToBooks()
+    println("Concatenation: " + concatenate("hello", null))
+
+
 }
 
 // TODO: 1.- Write a function called exercise1()
@@ -56,8 +61,8 @@ fun exercise1(){
 
 fun exercise3 (dni: Int): String{
 
-    val resto: Int = dni % 23
-    val letras = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S", "Q","V", "H", "L", "C", "K", "E")
+    var resto: Int = dni % 23
+    var letras = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S", "Q","V", "H", "L", "C", "K", "E")
 
 
 
@@ -69,10 +74,12 @@ fun exercise3 (dni: Int): String{
 // (simplification 2)
 // https://developer.android.com/kotlin/learn#simplifying
 // Note: You can remove the : Int in the declaration
-fun countAs(str: String): Int {
+/*fun countAs(str: String): Int {
     val count = str.count { c -> c == 'a' }
     return count
-}
+}*/
+fun countAs(str: String): Int =
+        str.count { c -> c == 'a' }
 
 
 fun stringMapper(str: String, mapper: (String) -> Int): Int {
@@ -84,28 +91,61 @@ fun stringMapper(str: String, mapper: (String) -> Int): Int {
 // and the second one with a function that returns the number of a’s.
 // Print its results.
 
+fun exercise5(cadena: String){
+    println(stringMapper(cadena,{input ->
+        input.length
+    }))
+    println(stringMapper(cadena, {input -> countAs(input)} ))
+}
+
+
 
 data class Reader(val name: String, val age: Int)
 // TODO 6: Create a data class Book that has 2 parameters
 // title as a String that can not be modified (read only)
 // and reader as a Reader
+
+data class Book constructor(val title: String, var lector: Reader){
+    public val titulo: String = title
+    public var reader: Reader = lector
+
+
+}
 fun assignReadersToBooks() {
     val reader1 = Reader("John", 23)
     val reader2 = Reader("Mary", 34)
     // TODO 6: Uncomment these sentences
-    // val book1 = Book("The name of the wind", reader1)
-    // book1.reader = reader2
+    val book1 = Book("The name of the wind", reader1)
+    book1.reader = reader2
+
+
 }
+
 
 // TODO 7: Write the body of this function
 // That prints the length of the string parameter.
 // If the string is null, print 0
 fun printStringLength(string: String?) {
     // Body
+    var total: Int
+    if ((string) != null) {
+        total = string.length
+        println(total)
+    }else{
+        println(0)
+    }
+
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
 // received as parameters.
 // If a String is null, convert it to “”.
 // This is the invocation:
-// println("Concatenation: " + concatenate("hello", null))
+fun concatenate(string1: String?,string2: String?): String {
+    var cadena1 = if ((string1) == null){""}else{string1}
+    var cadena2 = if ((string2) == null){""}else{string2}
+
+    return cadena1+cadena2
+}
+
+//println("Concatenation: " + concatenate("hello", null))
