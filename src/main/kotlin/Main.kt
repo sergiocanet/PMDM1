@@ -116,15 +116,7 @@ fun assignReadersToBooks() {
 // That prints the length of the string parameter.
 // If the string is null, print 0
 fun printStringLength(string: String?) {
-    // Body
-    var total: Int
-    if ((string) != null) {
-        total = string.length
-        println(total)
-    }else{
-        println(0)
-    }
-
+    println("The length is" + string?.length ?: 0) // Elvis operator
 }
 
 // TODO 8: Write a method concatenate() that concatenates 2 Strings
