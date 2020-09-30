@@ -20,13 +20,11 @@ fun main() {
 // println() and invoke it from main().
 // Look for how to make a “for” loop here:
 // https://kotlinlang.org/docs/reference/control-flow.html
-fun exercise1(){
-    var contador: Int
+fun exercise1() {
+    // You don't need to declare the variable of the counter of the for
     for (contador in 1..10){
         println(contador)
     }
-
-
 }
 
 // TODO: 2.- Uncomment this function:
