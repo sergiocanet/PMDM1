@@ -58,14 +58,9 @@ fun exercise1() {
 // https://kotlinlang.org/docs/reference/basic-types.html#arrays
 
 fun exercise3 (dni: Int): String{
-
-    var resto: Int = dni % 23
-    var letras = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S", "Q","V", "H", "L", "C", "K", "E")
-
-
-
-    return letras.get(resto).toString()
-
+    var reminder: Int = dni % 23
+    var LETTERS = arrayOf("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S", "Q","V", "H", "L", "C", "K", "E")
+    return "" + dni + LETTERS.get(reminder)
 }
 
 // TODO: 4 Modify this function abbreviating it with "=" as return type
