@@ -41,9 +41,9 @@ fun exercise1() {
             // take into account that some months have 30, others 31 and one 28 or 29.
             // Invoke the function from main()
             when(month){
-                1,3,5,7,8,10,12 -> println("Tiene 31 días")
-                4,6,9,11 -> println("Tiene 30 días")
-                2 -> println("Tiene 28 o 29")
+                1,3,5,7,8,10,12 -> println("31 days")
+                4,6,9,11 -> println("30 days")
+                2 -> println("28 or 29 days")
             }
 
         }
