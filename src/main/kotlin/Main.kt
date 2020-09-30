@@ -124,10 +124,7 @@ fun printStringLength(string: String?) {
 // If a String is null, convert it to “”.
 // This is the invocation:
 fun concatenate(string1: String?,string2: String?): String {
-    var cadena1 = if ((string1) == null){""}else{string1}
-    var cadena2 = if ((string2) == null){""}else{string2}
-
-    return cadena1+cadena2
+    return (string1 ?: "") + (string2 ?: "")
 }
 
 //println("Concatenation: " + concatenate("hello", null))
