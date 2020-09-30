@@ -98,12 +98,9 @@ data class Reader(val name: String, val age: Int)
 // title as a String that can not be modified (read only)
 // and reader as a Reader
 
-data class Book constructor(val title: String, var lector: Reader){
-    public val titulo: String = title
-    public var reader: Reader = lector
-
-
+data class Book constructor(val title: String, var reader: Reader){
 }
+
 fun assignReadersToBooks() {
     val reader1 = Reader("John", 23)
     val reader2 = Reader("Mary", 34)
